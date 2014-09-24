@@ -33,7 +33,8 @@
                                                     :output-dir "target/classes/public/js/chat-demo"
                                                     :optimizations :none
                                                     :source-map true}}]}
-                   :repl-options {:init-ns user
+                   :repl-options {:timeout 120000
+                                  :init-ns user
                                   :init (start)
                                   :welcome (do
                                              (println "Welcome to the core.async tutorial!")
