@@ -126,14 +126,14 @@
 
             <p>
                 The <code>&lt;!</code> function takes a value from the channel. This function can only be used in the
-                context context of a <code>go</code>. This will allow the loop to park until it has a value. It’s
-                nice because it allow you to write code to appear as if the code blocks at that point without actually
+                context of a <code>go</code>. This will allow the loop to park until it has a value. It’s
+                nice because it allows you to write code to appear as if the code blocks at that point without actually
                 blocking.
             </p>
 
             <p>
                 We use a <code>when-let</code> because the channel will always produce a non-null value. If we get a
-                null value, that indicates the channel was closed. This also means you can not put a null value into
+                null value, that indicates the channel was closed. This also means you cannot put a null value into
                 a channel. If there is a chance the channel will produce a <code>false</code> value, you can use
                 <code>when-some</code> instead, which was introduced in Clojure 1.6.
             </p>
@@ -166,7 +166,7 @@
                 Once you have a running event loop, there is one last thing we should probably do. We should close
                 the channel once we're done with it. This will cause the event loop we created to terminate cleanly
                 and be garbage-collected. To do this, all you need to do is call <code>close!</code> on the channel.
-                This idempotent call will cause the channel to longer accept new values, but will allow readers to
+                This idempotent call will cause the channel to no longer accept new values, but will allow readers to
                 continue reading values until the channel is exhausted.
             </p>
         </section>

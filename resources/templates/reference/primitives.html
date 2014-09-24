@@ -20,7 +20,7 @@
     The historical roots of core.async trace all the way back to Hoare’s <a href="http://usingcsp.com/">Communicating
     Sequential Processes</a> (CSP). One of the most immediate inspirations for core.async is the
     <a href="http://golang.org/">Go programming language</a>. Fundamentally, one of the principles behind CSP is
-    that coordination between concurrent processes is achieved via message-passing. In core.async, this achieved
+    that coordination between concurrent processes is achieved via message-passing. In core.async, this is achieved
     through the use of queue-like <em>channels</em>.
 </p>
 
@@ -57,7 +57,7 @@
 
         <dt>…between logical threads of execution…</dt>
         <dd>
-            While channels are certainly useful for coordinating between threads, they do no require actual
+            While channels are certainly useful for coordinating between threads, they do not require actual
             OS-level threads to work. They are usable within ClojureScript, which has only a single thread of
             execution. In fact, the most common use case does not require dedicated threads.
         </dd>
@@ -260,7 +260,7 @@
         <p>
             Nonetheless, this asynchronous variant would work just fine in ClojureScript. The only price we have to pay
             is a small sampling of callback hell. But what if there was a way to maintain the readability of the
-            synchronous function buy still enjoy the benefits of asynchronous operation? Well, let’s check out what
+            synchronous function but still enjoy the benefits of asynchronous operation? Well, let’s check out what
             <code>go</code> can do for us:
         </p>
 

@@ -101,8 +101,8 @@
             </p>
 
             <p>
-                Now the only bit of functionality you will need to use in mult-channel properly is to ensure that when
-                the client disconnects you shut down things down properly:
+                Now the only bit of functionality you will need to use a mult-channel properly is to ensure that when
+                the client disconnects you shut things down properly:
             </p>
             <pre class="brush: clojure">(async/untap! subscribe-channel chat-events)
 (async/close! chat-events)</pre>
